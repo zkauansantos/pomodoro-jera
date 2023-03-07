@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -11,7 +11,8 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    background: rgba(2,120,180,0.5);
     font-family: 'Roboto', sans-serif;
-  }
+    background: ${({theme}) => theme.colors.bg};
+    color: ${({theme}) => theme.colors.text};
+}
 `;
