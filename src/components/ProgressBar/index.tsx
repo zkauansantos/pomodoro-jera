@@ -1,9 +1,9 @@
 import { useContext, useEffect } from 'react';
 import { TimerContext } from '../../context/TimerContext';
 import Clock from '../Clock';
-import { ContainerCounter, ContainerProgress } from './styles';
+import { Container, ContainerCounter, ContainerProgress } from './styles';
 
-export default function CircularProgressBar() {
+export default function ProgressBar() {
 	const { progress, setProgress, time, initTime}: any = useContext(TimerContext);
 
 	useEffect(() => {
@@ -12,12 +12,14 @@ export default function CircularProgressBar() {
 
 
 	return (
-		<ContainerProgress
-			progress={progress}
-		>
-			<ContainerCounter>
-				<Clock/>
-			</ContainerCounter>
-		</ContainerProgress>
+		<Container>
+			<ContainerProgress
+				progress={progress}
+			>
+				<ContainerCounter>
+					<Clock/>
+				</ContainerCounter>
+			</ContainerProgress>
+		</Container>
 	);
 }

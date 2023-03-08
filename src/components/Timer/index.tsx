@@ -1,10 +1,10 @@
-import CircularProgressBar from '../CircularProgressBar';
+import ProgressBar from '../ProgressBar';
 import { Container } from './styles';
 
 export default function Timer() {
 	return (
 		<Container>
-			<CircularProgressBar/>
+			<ProgressBar/>
 		</Container>
 	);
 }

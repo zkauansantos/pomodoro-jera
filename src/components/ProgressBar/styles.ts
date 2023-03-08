@@ -1,5 +1,16 @@
 import styled, { css } from 'styled-components';
 
+export const Container = styled.div`
+  width: 350px;
+  height: 350px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: ${({theme}) => theme.colors.bg};
+`;
+
+
 export const ContainerProgress = styled.div<{progress: number}>`
   width: 350px;
   height: 350px;
