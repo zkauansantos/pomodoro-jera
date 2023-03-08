@@ -9,5 +9,6 @@ export const Container = styled.div`
 
   h1 {
     font-size: 32px;
+    margin-top: 96px;
   }
 `;

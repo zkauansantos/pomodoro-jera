@@ -1,10 +1,14 @@
-import * as S from './styles';
+import Tags from '../../components/Tags';
+import Timer from '../../components/Timer';
+import { Container } from './styles';
 
 export default function Home() {
 	return (
-		<S.Container>
+		<Container>
 			<h1>Pomodoro</h1>
-		</S.Container>
+
+			<Tags/>
+		</Container>
 	);
 }
 
