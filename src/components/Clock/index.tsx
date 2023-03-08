@@ -3,7 +3,7 @@ import { useEffect, useContext } from 'react';
 import { TimerContext } from '../../context/TimerContext';
 
 export default function Clock() {
-	const { time, setTime, isActive, setIsActive }: any = useContext(TimerContext);
+	const { time, setTime, isActive, setIsActive, setAudioPlay }: any = useContext(TimerContext);
 
 	useEffect(() => {
 		if(isActive && time > 0) {

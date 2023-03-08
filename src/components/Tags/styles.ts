@@ -2,19 +2,22 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   margin-top: 16px;
-  padding: 4px;
-  border-radius: 40px;
-  background-color: ${({theme}) => theme.colors.bgLight};
+  border-radius: 8px;
   display: flex;
-  gap: 16px;
+  gap: 12px;
 `;
 
 export const Tag = styled.button<{active : boolean}> `
   border: none;
-  border-radius: 40px;
-  padding: 6px 10px;
+  color: ${({theme}) => theme.colors.text};
+  font-weight: bold;
+  background: ${({theme}) => theme.colors.bgLight};
+  border-radius: 8px;
+  padding: 6px 12px;
+  text-transform: uppercase;
 
   ${({active, theme}) => active && css`
     background: ${theme.colors.secondary};
+    color: ${theme.colors.bg};
   `};
 `;

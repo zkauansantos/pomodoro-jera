@@ -8,6 +8,7 @@ export const Container = styled.div`
   align-items: center;
 
   h1 {
+    text-transform: uppercase;
     font-size: 32px;
     margin-top: 96px;
   }

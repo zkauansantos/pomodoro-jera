@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 export const ContainerProgress = styled.div<{progress: number}>`
   width: 350px;
   height: 350px;
-  border-radius: 50%;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,7 @@ export const ContainerCounter = styled.div`
   width: 340px;
   height: 340px;
   background: ${({theme}) => theme.colors.bgLight};
-  border-radius: 50%;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
