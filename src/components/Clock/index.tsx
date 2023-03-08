@@ -2,7 +2,7 @@ import { Container, TimerText } from './styles';
 import { useEffect, useState } from 'react';
 
 export default function Clock() {
-	const [time, setTime] = useState(500);
+	const [time, setTime] = useState(60);
 	const [isActive, setIsActive] = useState(false);
 
 	useEffect(() => {
