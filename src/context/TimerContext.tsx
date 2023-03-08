@@ -29,9 +29,23 @@ export default function TimerProvider({children}: TimerProviderProps) {
 		}
 	}
 
+	async function playAudio() {
+		const audio = new Audio(clear);
+		audio.play();
+		await	new Promise((resolve) => setTimeout(() => resolve(null), 7000));
+		toggleTime();
+		setIsActive(false);
+	}
+
 	useEffect(() => {
 		toggleTime();
 	}, [selectedTag]);
+
+	useEffect(() => {
+		if(time === 0){
+			playAudio();
+		}
+	},[time]);
 
 	return (
 		<TimerContext.Provider
