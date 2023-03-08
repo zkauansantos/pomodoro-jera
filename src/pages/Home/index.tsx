@@ -8,6 +8,7 @@ export default function Home() {
 			<h1>Pomodoro</h1>
 
 			<Tags/>
+			<Timer/>
 		</Container>
 	);
 }

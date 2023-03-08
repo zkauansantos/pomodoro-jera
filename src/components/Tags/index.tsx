@@ -1,12 +1,14 @@
-import { useState } from 'react';
+import { useContext } from 'react';
+import { TimerContext } from '../../context/TimerContext';
 import {Container, Tag} from './styles';
 
 export default function Tags () {
-	const [active, setActive] = useState(0);
-	const tags = ['Pomodoro', 'Short Break', 'Long Break'];
+	const tags = ['Pomodoro', 'Pequena Pausa', 'Longa Pausa'];
+	const { selectedTag, setSelectedTag, setIsActive }: any = useContext(TimerContext);
 
 	function handleActiveTag(index: number) {
-		setActive(index);
+		setSelectedTag(index);
+		setIsActive(false);
 	}
 
 	return (
@@ -14,7 +16,7 @@ export default function Tags () {
 			{tags.map((tag, i) => (
 				<Tag
 					onClick={() => handleActiveTag(i)}
-					active={active === i}
+					active={selectedTag === i}
 					key={i}>
 					{tag}
 				</Tag>

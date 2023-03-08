@@ -1,14 +1,14 @@
 import { Container, TimerText } from './styles';
-import { useEffect, useState } from 'react';
+import { useEffect, useContext } from 'react';
+import { TimerContext } from '../../context/TimerContext';
 
 export default function Clock() {
-	const [time, setTime] = useState(500);
-	const [isActive, setIsActive] = useState(false);
+	const { time, setTime, isActive, setIsActive }: any = useContext(TimerContext);
 
 	useEffect(() => {
 		if(isActive && time > 0) {
 			const intervalId = setInterval(() => {
-				setTime((prevTime) => prevTime - 1);
+				setTime((prevTime: number) => prevTime - 1);
 			}, 1000);
 
 			return () => clearInterval(intervalId);
@@ -26,7 +26,7 @@ export default function Clock() {
 	}
 
 	function toggleClock() {
-		setIsActive((prevState) => !prevState);
+		setIsActive((prevState: boolean) => !prevState);
 	}
 
 	return (
