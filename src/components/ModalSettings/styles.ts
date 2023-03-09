@@ -14,9 +14,9 @@ export const Overlay = styled.div`
 
 export const ContainerModal = styled.div`
   position: relative;
-  width: 500px;
+  min-width: 500px;
   border-radius: 8px;
-  min-height: 200px;
+  min-height: 250px;
   background: ${({theme}) => theme.colors.bgLight};
 `;
 
@@ -54,12 +54,17 @@ export const ContainerFields = styled.div`
 
   form {
     margin-top: 16px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 32px;
 
     .field {
       display: flex;
       align-items: center;
+      flex-direction: column;
       justify-content: center;
-      gap: 16px;
+      gap: 8px;
 
       label {
         font-size: 18px;
@@ -97,4 +102,11 @@ export const ContainerFields = styled.div`
       }
     }
   }
+
+  .error {
+    color: #f00;
+    position: absolute;
+    bottom: 60px;
+    right: 32%;
+ }
 `;
