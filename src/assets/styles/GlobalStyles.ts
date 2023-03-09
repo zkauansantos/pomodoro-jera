@@ -14,5 +14,12 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     background: ${({theme}) => theme.colors.bg};
     color: ${({theme}) => theme.colors.text};
+
+    .Toastify__toast-container--bottom-center {
+      * {
+          background: ${({theme}) => theme.colors.bgLight};
+          color:  ${({theme}) => theme.colors.text};
+      }
+    }
 }
 `;

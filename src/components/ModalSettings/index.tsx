@@ -2,6 +2,7 @@ import { Overlay, ContainerModal, HeaderModal, ContainerFields } from './styles'
 import { IoMdClose } from 'react-icons/io';
 import { useContext, useEffect, useState } from 'react';
 import { TimerContext } from '../../context/TimerContext';
+import { toast } from 'react-toastify';
 
 interface ModalSettingsProps {
   onCloseModal(): void
@@ -39,6 +40,7 @@ export default function ModalSettings({onCloseModal}: ModalSettingsProps) {
 		updatedShortBreak ? setShortBreak(Number(updatedShortBreak) * 60) : null;
 		updatedLongBreak ? setLongBreak(Number(updatedLongBreak) * 60) : null;
 		onCloseModal();
+		toast.success('O(s) seu(s) tempos foram alterados com sucesso');
 	}
 
 	useEffect(() => {
