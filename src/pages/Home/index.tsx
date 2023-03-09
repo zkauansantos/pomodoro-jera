@@ -1,9 +1,12 @@
 import Tags from '../../components/Tags';
+import { useState } from 'react';
+
 import Timer from '../../components/Timer';
 import Settings from '../../components/Settings';
-import { Container } from './styles';
-import { useState } from 'react';
+import PomodorosOfDay from '../../components/PomodorosOfDay';
 import ModalSettings from '../../components/ModalSettings';
+
+import { Container } from './styles';
 
 export default function Home() {
 	const [isModalVisible, setIsModalVisible] = useState(false);
@@ -15,6 +18,8 @@ export default function Home() {
 			<Tags/>
 			<Timer/>
 			<Settings onOpenModal={() => setIsModalVisible(true)}/>
+			<PomodorosOfDay/>
+
 			{isModalVisible && (
 				<ModalSettings
 					onCloseModal={() => setIsModalVisible(false)}

@@ -2,12 +2,14 @@ import { useEffect, useContext, useState } from 'react';
 import {toast} from 'react-toastify';
 
 import { TimerContext } from '../../context/TimerContext';
+import useEndOfDay from '../../hooks/useEndOfDay';
 
 import { Container } from './styles';
 
 export default function PomodorosOfDay() {
 	const { initTime, time, selectedTag} : any = useContext(TimerContext);
 	const [pomodorosOfDay, setPomodrosOfDay] = useState(0);
+	useEndOfDay(setPomodrosOfDay);
 
 	useEffect(() => {
 		if(selectedTag === 0) {
