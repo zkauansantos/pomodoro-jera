@@ -61,3 +61,6 @@ Abra sua linha de comando (cmd, gitbash, zsh) em uma pasta de sua preferencia e 
 Visualize a aplicação no seu navegador no link: http://localhost:5173/
 
 
+# Link de visualização no youtube
+
+https://www.youtube.com/watch?v=VYFzkPfFfVQ
