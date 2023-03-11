@@ -5,6 +5,10 @@ export const Container = styled.div`
   border-radius: 8px;
   display: flex;
   gap: 12px;
+
+  @media screen and (max-width: 400px){
+    gap: 8px;
+  }
 `;
 
 export const Tag = styled.button<{active : boolean}> `
@@ -20,4 +24,9 @@ export const Tag = styled.button<{active : boolean}> `
     background: ${theme.colors.secondary};
     color: ${theme.colors.bg};
   `};
+
+  @media screen and (max-width: 400px){
+    font-size: 12px;
+    padding: 4px 8px;
+  }
 `;

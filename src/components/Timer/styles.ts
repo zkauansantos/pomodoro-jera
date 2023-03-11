@@ -12,4 +12,9 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 400px){
+    width: 320px;
+    height: 320px;
+  }
 `;

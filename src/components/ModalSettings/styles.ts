@@ -14,10 +14,14 @@ export const Overlay = styled.div`
 
 export const ContainerModal = styled.div`
   position: relative;
-  min-width: 500px;
+  width: 500px;
   border-radius: 8px;
   min-height: 250px;
   background: ${({theme}) => theme.colors.bgLight};
+
+  @media screen and (max-width: 768px ){
+    width: 320px;
+  }
 `;
 
 export const HeaderModal = styled.header`

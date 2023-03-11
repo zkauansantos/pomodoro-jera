@@ -11,5 +11,9 @@ export const Container = styled.div`
     text-transform: uppercase;
     font-size: 32px;
     margin-top: 96px;
+
+    @media screen and (max-width: 400px) {
+      font-size: 28px;
+    }
   }
 `;

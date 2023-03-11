@@ -23,4 +23,8 @@ export const Container = styled.div`
 
 export const TimerText = styled.h3`
   font-size: 70px;
+
+  @media screen and (max-width: 400px) {
+      font-size: 60px;
+  }
 `;
